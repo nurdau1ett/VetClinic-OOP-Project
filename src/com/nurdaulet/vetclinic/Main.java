@@ -2,19 +2,20 @@ package com.nurdaulet.vetclinic;
 
 public class Main {
 
+
     public static void main(String[] args) {
 
-        // 1️⃣ Welcome message
+
         System.out.println("=== VetClinic Management System ===\n");
 
-        // 2️⃣ Create objects (5+ objects, mix of classes)
+
         Pet pet1 = new Pet(1, "Buddy", "Dog", 3, false);
         Pet pet2 = new Pet();
         Owner owner1 = new Owner(101, "Aruzhan", "+77011234567", 2, false);
         Owner owner2 = new Owner();
         Veterinarian vet1 = new Veterinarian(201, "Dr. Aibek", "Dog", 6, true);
 
-        // 3️⃣ Display initial state
+
         System.out.println("--- INITIAL STATE ---");
         System.out.println(pet1);
         System.out.println(pet2);
@@ -23,7 +24,7 @@ public class Main {
         System.out.println(vet1);
         System.out.println();
 
-        // 4️⃣ Test GETTERS
+
         System.out.println("--- TESTING GETTERS ---");
         System.out.println("Pet1 name: " + pet1.getName());
         System.out.println("Pet1 age: " + pet1.getAge());
@@ -31,7 +32,7 @@ public class Main {
         System.out.println("Vet1 experience: " + vet1.getExperienceYears());
         System.out.println();
 
-        // 5️⃣ Test SETTERS
+
         System.out.println("--- TESTING SETTERS ---");
         pet2.setName("Kitty");
         pet2.setSpecies("Cat");
@@ -45,7 +46,7 @@ public class Main {
         System.out.println("Updated vet1 availability: " + vet1.isAvailable());
         System.out.println();
 
-        // 6️⃣ Test LOGIC METHODS
+
         System.out.println("--- TESTING LOGIC METHODS ---");
 
         System.out.println("Is pet1 young? " + pet1.isYoung());
@@ -62,7 +63,7 @@ public class Main {
         System.out.println("Can vet1 treat Dogs? " + vet1.canTreat("Dog"));
         System.out.println();
 
-        // 7️⃣ Final state
+
         System.out.println("--- FINAL STATE ---");
         System.out.println(pet1);
         System.out.println(pet2);
@@ -70,7 +71,7 @@ public class Main {
         System.out.println(owner2);
         System.out.println(vet1);
 
-        // 8️⃣ Completion message
+
         System.out.println("\n=== Program Complete ===");
     }
 }

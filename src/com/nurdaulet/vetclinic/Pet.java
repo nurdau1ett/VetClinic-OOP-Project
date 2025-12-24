@@ -2,14 +2,15 @@ package com.nurdaulet.vetclinic;
 
 public class Pet {
 
-    // 1️⃣ PRIVATE FIELDS (кемі 4)
+
+
     private int petId;
     private String name;
     private String species;
     private int age;
     private boolean vaccinated;
 
-    // 2️⃣ PARAMETERIZED CONSTRUCTOR (барлық field)
+
     public Pet(int petId, String name, String species, int age, boolean vaccinated) {
         this.petId = petId;
         this.name = name;
@@ -18,7 +19,7 @@ public class Pet {
         this.vaccinated = vaccinated;
     }
 
-    // 3️⃣ DEFAULT CONSTRUCTOR
+
     public Pet() {
         this.petId = 0;
         this.name = "Белгісіз";
@@ -27,7 +28,7 @@ public class Pet {
         this.vaccinated = false;
     }
 
-    // 4️⃣ GETTERS
+
     public int getPetId() {
         return petId;
     }
@@ -48,7 +49,7 @@ public class Pet {
         return vaccinated;
     }
 
-    // 5️⃣ SETTERS
+
     public void setPetId(int petId) {
         this.petId = petId;
     }
@@ -69,21 +70,21 @@ public class Pet {
         this.vaccinated = vaccinated;
     }
 
-    // 6️⃣ LOGIC METHODS (кемі 2)
 
-    // Жануар жас па?
+
+
     public boolean isYoung() {
         return age < 2;
     }
 
-    // Вакцина салу
+
     public void vaccinate() {
         if (!vaccinated) {
             vaccinated = true;
         }
     }
 
-    // 7️⃣ toString()
+
     @Override
     public String toString() {
         return "Pet{" +
