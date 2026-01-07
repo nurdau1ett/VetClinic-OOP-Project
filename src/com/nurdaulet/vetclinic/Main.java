@@ -8,7 +8,6 @@ public class Main {
 
     private static ArrayList<Pet> pets = new ArrayList<>();
     private static ArrayList<Owner> owners = new ArrayList<>();
-
     private static Scanner scanner = new Scanner(System.in);
 
 
