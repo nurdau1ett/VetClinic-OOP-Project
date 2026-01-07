@@ -14,6 +14,12 @@ public class Main {
     public static void main(String[] args) {
 
         boolean running = true;
+        pets.add(new Pet(1, "Buddy", "Dog", 3, false));
+        pets.add(new Pet(2, "Kitty", "Cat", 1, true));
+
+        owners.add(new Owner(101, "Aruzhan", "+77011234567", 2, false));
+        owners.add(new Owner(102, "Dias", "+77019998877", 1, false));
+
 
         while (running) {
             System.out.println("\n=== VET CLINIC MENU ===");
@@ -42,6 +48,7 @@ public class Main {
                     break;
                 case 0:
                     running = false;
+                    scanner.close();
                     System.out.println("Exiting...");
                     break;
                 default:
