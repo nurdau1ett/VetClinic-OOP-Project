@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b5d73fb-afe0-4495-97ce-0ae99b554dd4" name="Changes" comment="Week2: core classes and main demonstration completed">
+    <list default="true" id="6b5d73fb-afe0-4495-97ce-0ae99b554dd4" name="Changes" comment="Week3: validation added to all entities">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Owner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Pet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Veterinarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Veterinarian.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +104,7 @@
       <workItem from="1766553203372" duration="1421000" />
       <workItem from="1766596202134" duration="4761000" />
       <workItem from="1766634146836" duration="2865000" />
-      <workItem from="1767787188042" duration="2472000" />
+      <workItem from="1767787188042" duration="7280000" />
     </task>
     <task id="LOCAL-00001" summary="Week1: initial project setup">
       <option name="closed" value="true" />
@@ -140,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766555454147</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Week3: validation added to all entities">
+      <option name="closed" value="true" />
+      <created>1767790203301</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1767790203301</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +155,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Week1: initial project setup" />
     <MESSAGE value="Week2: core classes and main demonstration completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Week2: core classes and main demonstration completed" />
+    <MESSAGE value="Week3: validation added to all entities" />
+    <option name="LAST_COMMIT_MESSAGE" value="Week3: validation added to all entities" />
   </component>
 </project>
