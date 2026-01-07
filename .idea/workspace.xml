@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b5d73fb-afe0-4495-97ce-0ae99b554dd4" name="Changes" comment="Week1: initial project setup">
-      <change afterPath="$PROJECT_DIR$/src/com/nurdaulet/First_code.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Owner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Pet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Veterinarian.java" afterDir="false" />
+    <list default="true" id="6b5d73fb-afe0-4495-97ce-0ae99b554dd4" name="Changes" comment="Week2: core classes and main demonstration completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/First.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Veterinarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Veterinarian.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +103,10 @@
       <workItem from="1765948163758" duration="1656000" />
       <workItem from="1765949848721" duration="764000" />
       <workItem from="1766490542474" duration="4201000" />
-      <workItem from="1766553203372" duration="646000" />
+      <workItem from="1766553203372" duration="1421000" />
+      <workItem from="1766596202134" duration="4761000" />
+      <workItem from="1766634146836" duration="2865000" />
+      <workItem from="1767787188042" duration="2472000" />
     </task>
     <task id="LOCAL-00001" summary="Week1: initial project setup">
       <option name="closed" value="true" />
@@ -124,7 +124,23 @@
       <option name="project" value="LOCAL" />
       <updated>1765949335133</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Week2: core classes and main demonstration completed">
+      <option name="closed" value="true" />
+      <created>1766555033265</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1766555033266</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Week2: core classes and main demonstration completed">
+      <option name="closed" value="true" />
+      <created>1766555454147</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1766555454147</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +148,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Week1: initial project setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Week1: initial project setup" />
+    <MESSAGE value="Week2: core classes and main demonstration completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Week2: core classes and main demonstration completed" />
   </component>
 </project>

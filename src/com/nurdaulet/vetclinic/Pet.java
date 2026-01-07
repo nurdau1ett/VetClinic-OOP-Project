@@ -2,23 +2,19 @@ package com.nurdaulet.vetclinic;
 
 public class Pet {
 
-
-
     private int petId;
     private String name;
     private String species;
     private int age;
     private boolean vaccinated;
 
-
     public Pet(int petId, String name, String species, int age, boolean vaccinated) {
         this.petId = petId;
-        this.name = name;
-        this.species = species;
-        this.age = age;
+        setName(name);
+        setSpecies(species);
+        setAge(age);
         this.vaccinated = vaccinated;
     }
-
 
     public Pet() {
         this.petId = 0;
@@ -27,7 +23,6 @@ public class Pet {
         this.age = 0;
         this.vaccinated = false;
     }
-
 
     public int getPetId() {
         return petId;
@@ -55,21 +50,34 @@ public class Pet {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name != null && !name.trim().isEmpty()) {
+            this.name = name;
+        } else {
+            System.out.println("Name cannot be empty!");
+            this.name = "Unknown";
+        }
     }
 
     public void setSpecies(String species) {
-        this.species = species;
+        if (species != null && !species.trim().isEmpty()) {
+            this.species = species;
+        } else {
+            this.species = "Unknown";
+        }
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if (age >= 0) {
+            this.age = age;
+        } else {
+            System.out.println("Age cannot be negative!");
+            this.age = 0;
+        }
     }
 
     public void setVaccinated(boolean vaccinated) {
         this.vaccinated = vaccinated;
     }
-
 
 
 

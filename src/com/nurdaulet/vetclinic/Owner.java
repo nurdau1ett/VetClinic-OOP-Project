@@ -12,9 +12,9 @@ public class Owner {
 
     public Owner(int ownerId, String name, String phone, int numberOfPets, boolean frequentClient) {
         this.ownerId = ownerId;
-        this.name = name;
-        this.phone = phone;
-        this.numberOfPets = numberOfPets;
+        setName(name);
+        setPhone(phone);
+        setNumberOfPets(numberOfPets);
         this.frequentClient = frequentClient;
     }
 
@@ -54,16 +54,32 @@ public class Owner {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name != null && !name.trim().isEmpty()) {
+            this.name = name;
+        } else {
+            this.name = "Unknown";
+            System.out.println("Owner name cannot be empty!");
+        }
     }
 
     public void setPhone(String phone) {
-        this.phone = phone;
+        if (phone != null && phone.startsWith("+7")) {
+            this.phone = phone;
+        } else {
+            this.phone = "Invalid";
+            System.out.println("Phone number is invalid!");
+        }
     }
 
     public void setNumberOfPets(int numberOfPets) {
-        this.numberOfPets = numberOfPets;
+        if (numberOfPets >= 0) {
+            this.numberOfPets = numberOfPets;
+            this.frequentClient = numberOfPets >= 3;
+        } else {
+            this.numberOfPets = 0;
+        }
     }
+
 
     public void setFrequentClient(boolean frequentClient) {
         this.frequentClient = frequentClient;

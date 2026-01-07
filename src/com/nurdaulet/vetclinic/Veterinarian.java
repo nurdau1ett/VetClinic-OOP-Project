@@ -12,9 +12,9 @@ public class Veterinarian {
 
     public Veterinarian(int vetId, String name, String specialization, int experienceYears, boolean available) {
         this.vetId = vetId;
-        this.name = name;
-        this.specialization = specialization;
-        this.experienceYears = experienceYears;
+        setName(name);
+        setSpecialization(specialization);
+        setExperienceYears(experienceYears);
         this.available = available;
     }
 
@@ -54,15 +54,30 @@ public class Veterinarian {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name != null && !name.trim().isEmpty()) {
+            this.name = name;
+        } else {
+            this.name = "Unknown";
+            System.out.println("Veterinarian name cannot be empty!");
+        }
     }
 
     public void setSpecialization(String specialization) {
-        this.specialization = specialization;
+        if (specialization != null && !specialization.trim().isEmpty()) {
+            this.specialization = specialization;
+        } else {
+            this.specialization = "General";
+            System.out.println("Specialization cannot be empty!");
+        }
     }
 
     public void setExperienceYears(int experienceYears) {
-        this.experienceYears = experienceYears;
+        if (experienceYears >= 0) {
+            this.experienceYears = experienceYears;
+        } else {
+            this.experienceYears = 0;
+            System.out.println("Experience years cannot be negative!");
+        }
     }
 
     public void setAvailable(boolean available) {
