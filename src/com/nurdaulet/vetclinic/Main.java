@@ -6,9 +6,8 @@ import java.util.Scanner;
 
 public class Main {
 
+    private static ArrayList<Person> people = new ArrayList<>();
     private static ArrayList<Pet> pets = new ArrayList<>();
-    private static ArrayList<Owner> owners = new ArrayList<>();
-    private static ArrayList<Veterinarian> veterinarians = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
 
 
@@ -17,13 +16,16 @@ public class Main {
         boolean running = true;
         pets.add(new Pet(1, "Buddy", "Dog", 3, false));
         pets.add(new Pet(2, "Kitty", "Cat", 1, true));
+        people.add(
+                new Veterinarian(1, "Dr. Aibek", 35,
+                        201, "Dog", 6, true)
+        );
 
-        veterinarians.add(new Veterinarian(201, "Dr. Aibek", "Dog", 6, true));
-        veterinarians.add(new Veterinarian(202, "Dr. Dana", "Cat", 3, true));
+        people.add(
+                new Owner(2, "Aruzhan", 28,
+                        "+77011234567", 2, false)
+        );
 
-
-        owners.add(new Owner(101, "Aruzhan", "+77011234567", 2, false));
-        owners.add(new Owner(102, "Dias", "+77019998877", 1, false));
 
 
         while (running) {
@@ -31,11 +33,12 @@ public class Main {
             System.out.println("1. Add Pet");
             System.out.println("2. View All Pets");
             System.out.println("3. Add Owner");
-            System.out.println("4. View All Owners");
-            System.out.println("5. Add Veterinarian");
-            System.out.println("6. View All Veterinarians");
+            System.out.println("4. Add Veterinarian");
+            System.out.println("5. Demonstrate Polymorphism");
+            System.out.println("6. View Only Veterinarians");
+            System.out.println("7. View All People (Polymorphic)");
+            System.out.println("8. Add General Person");
             System.out.println("0. Exit");
-            System.out.print("Choose option: ");
 
             int choice = scanner.nextInt();
             scanner.nextLine(); // buffer clear
@@ -51,18 +54,22 @@ public class Main {
                     addOwner();
                     break;
                 case 4:
-                    viewAllOwners();
-                    break;
-                case 5:
                     addVeterinarian();
                     break;
-
+                case 5:
+                    demonstratePolymorphism();
+                    break;
                 case 6:
-                    viewAllVeterinarians();
+                    viewOnlyVeterinarians();
+                    break;
+                case 7:
+                    viewAllPeople();
+                    break;
+                case 8:
+                    addPerson();
                     break;
                 case 0:
                     running = false;
-                    scanner.close();
                     System.out.println("Exiting...");
                     break;
                 default:
@@ -91,6 +98,7 @@ public class Main {
         Pet pet = new Pet(id, name, species, age, false);
         pets.add(pet);
 
+
         System.out.println("Pet added successfully!");
     }
     private static void viewAllPets() {
@@ -105,70 +113,111 @@ public class Main {
             System.out.println(pet);
         }
     }
+    private static void demonstratePolymorphism() {
+        System.out.println("=== POLYMORPHISM DEMO ===");
+
+        for (Person p : people) {
+            p.work();
+        }
+    }
+    private static void viewOnlyVeterinarians() {
+        System.out.println("=== VETERINARIANS ONLY ===");
+
+        boolean found = false;
+
+        for (Person p : people) {
+            if (p instanceof Veterinarian) {   // ← INSTANCEOF
+                Veterinarian v = (Veterinarian) p; // ← DOWNCAST
+                System.out.println(v);
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No veterinarians found.");
+        }
+    }
     private static void addOwner() {
         System.out.println("--- ADD OWNER ---");
 
-        System.out.print("Owner ID: ");
+        System.out.print("Person ID: ");
         int id = scanner.nextInt();
         scanner.nextLine();
 
         System.out.print("Name: ");
         String name = scanner.nextLine();
+
+        System.out.print("Age: ");
+        int age = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.print("Phone: ");
         String phone = scanner.nextLine();
 
-        Owner owner = new Owner(id, name, phone, 0, false);
-        owners.add(owner);
+        System.out.print("Number of pets: ");
+        int petsCount = scanner.nextInt();
+        scanner.nextLine();
+
+        Owner owner = new Owner(id, name, age, phone, petsCount, petsCount >= 3);
+        people.add(owner);
 
         System.out.println("Owner added successfully!");
     }
-    private static void viewAllOwners() {
-        System.out.println("--- ALL OWNERS ---");
 
-        if (owners.isEmpty()) {
-            System.out.println("No owners found.");
-            return;
-        }
-
-        for (Owner owner : owners) {
-            System.out.println(owner);
-        }
-    }
     private static void addVeterinarian() {
         System.out.println("--- ADD VETERINARIAN ---");
 
-        System.out.print("Vet ID: ");
+        System.out.print("Person ID: ");
         int id = scanner.nextInt();
         scanner.nextLine();
 
         System.out.print("Name: ");
         String name = scanner.nextLine();
 
+        System.out.print("Age: ");
+        int age = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.print("Vet ID: ");
+        int vetId = scanner.nextInt();
+        scanner.nextLine();
+
         System.out.print("Specialization: ");
-        String specialization = scanner.nextLine();
+        String spec = scanner.nextLine();
 
         System.out.print("Experience years: ");
         int exp = scanner.nextInt();
         scanner.nextLine();
 
-        veterinarians.add(new Veterinarian(id, name, specialization, exp, true));
+        Veterinarian vet =
+                new Veterinarian(id, name, age, vetId, spec, exp, true);
+
+        people.add(vet);
+
         System.out.println("Veterinarian added successfully!");
     }
-    private static void viewAllVeterinarians() {
-        System.out.println("--- ALL VETERINARIANS ---");
+    private static void viewAllPeople() {
+        System.out.println("=== ALL PEOPLE (POLYMORPHIC LIST) ===");
 
-        if (veterinarians.isEmpty()) {
-            System.out.println("No veterinarians found.");
+        if (people.isEmpty()) {
+            System.out.println("No people found.");
             return;
         }
 
-        for (Veterinarian v : veterinarians) {
-            System.out.println(v);
+        for (Person p : people) {
+            System.out.println(p);
         }
     }
+    private static void addPerson() {
+        System.out.print("ID: ");
+        int id = scanner.nextInt(); scanner.nextLine();
 
+        System.out.print("Name: ");
+        String name = scanner.nextLine();
 
+        System.out.print("Age: ");
+        int age = scanner.nextInt(); scanner.nextLine();
 
-
+        people.add(new Person(id, name, age));
+    }
 }

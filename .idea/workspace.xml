@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b5d73fb-afe0-4495-97ce-0ae99b554dd4" name="Changes" comment="Week3">
+    <list default="true" id="6b5d73fb-afe0-4495-97ce-0ae99b554dd4" name="Changes" comment="Week3: veterinarian menu completed">
+      <change afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Veterinarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Veterinarian.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +107,10 @@
       <workItem from="1766553203372" duration="1421000" />
       <workItem from="1766596202134" duration="4761000" />
       <workItem from="1766634146836" duration="2865000" />
-      <workItem from="1767787188042" duration="11736000" />
+      <workItem from="1767787188042" duration="13045000" />
+      <workItem from="1768112621207" duration="4855000" />
+      <workItem from="1768893314047" duration="1995000" />
+      <workItem from="1768903254545" duration="7715000" />
     </task>
     <task id="LOCAL-00001" summary="Week1: initial project setup">
       <option name="closed" value="true" />
@@ -177,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767802773467</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Week3: veterinarian menu completed">
+      <option name="closed" value="true" />
+      <created>1767803700096</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1767803700096</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +205,7 @@
     <MESSAGE value="Week3: menu system with add/view owners and pets" />
     <MESSAGE value="Week3: initial test data and scanner cleanup added" />
     <MESSAGE value="Week3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Week3" />
+    <MESSAGE value="Week3: veterinarian menu completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Week3: veterinarian menu completed" />
   </component>
 </project>

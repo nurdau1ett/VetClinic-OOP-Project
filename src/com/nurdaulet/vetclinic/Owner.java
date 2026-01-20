@@ -1,27 +1,27 @@
 package com.nurdaulet.vetclinic;
 
-public class Owner {
+public class Owner extends Person {
 
 
     private int ownerId;
-    private String name;
     private String phone;
     private int numberOfPets;
     private boolean frequentClient;
 
 
-    public Owner(int ownerId, String name, String phone, int numberOfPets, boolean frequentClient) {
-        this.ownerId = ownerId;
-        setName(name);
-        setPhone(phone);
-        setNumberOfPets(numberOfPets);
+    public Owner(int id, String name, int age,
+                 String phone, int numberOfPets, boolean frequentClient) {
+
+        super(id, name, age);
+        this.phone = phone;
+        this.numberOfPets = numberOfPets;
         this.frequentClient = frequentClient;
     }
 
 
     public Owner() {
+        super(0, "Белгісіз", 0);
         this.ownerId = 0;
-        this.name = "Белгісіз";
         this.phone = "Жоқ";
         this.numberOfPets = 0;
         this.frequentClient = false;
@@ -30,10 +30,6 @@ public class Owner {
 
     public int getOwnerId() {
         return ownerId;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public String getPhone() {
@@ -53,14 +49,6 @@ public class Owner {
         this.ownerId = ownerId;
     }
 
-    public void setName(String name) {
-        if (name != null && !name.trim().isEmpty()) {
-            this.name = name;
-        } else {
-            this.name = "Unknown";
-            System.out.println("Owner name cannot be empty!");
-        }
-    }
 
     public void setPhone(String phone) {
         if (phone != null && phone.startsWith("+7")) {
@@ -98,15 +86,22 @@ public class Owner {
         return numberOfPets >= 3;
     }
 
+    @Override
+    public void work() {
+        System.out.println("Owner " + name + " is taking care of pets.");
+    }
+
+    @Override
+    public String getRole() {
+        return "Owner";
+    }
 
     @Override
     public String toString() {
-        return "Owner{" +
-                "ownerId=" + ownerId +
-                ", name='" + name + '\'' +
-                ", phone='" + phone + '\'' +
-                ", numberOfPets=" + numberOfPets +
-                ", frequentClient=" + frequentClient +
-                '}';
+        return "[OWNER] Name: " + name +
+                ", Age: " + age +
+                ", Phone: " + phone +
+                ", Pets: " + numberOfPets +
+                ", Frequent client: " + frequentClient;
     }
 }

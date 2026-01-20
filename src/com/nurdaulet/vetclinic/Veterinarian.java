@@ -1,18 +1,22 @@
 package com.nurdaulet.vetclinic;
 
-public class Veterinarian {
+public class Veterinarian extends Person {
 
 
     private int vetId;
-    private String name;
     private String specialization;
     private int experienceYears;
     private boolean available;
 
 
-    public Veterinarian(int vetId, String name, String specialization, int experienceYears, boolean available) {
+    public Veterinarian(int id, String name, int age,
+                        int vetId, String specialization,
+                        int experienceYears, boolean available) {
+
+        // MUST be first line (Week 4 requirement)
+        super(id, name, age);
+
         this.vetId = vetId;
-        setName(name);
         setSpecialization(specialization);
         setExperienceYears(experienceYears);
         this.available = available;
@@ -20,8 +24,8 @@ public class Veterinarian {
 
 
     public Veterinarian() {
+        super(0, "Белгісіз", 0);
         this.vetId = 0;
-        this.name = "Белгісіз";
         this.specialization = "Жалпы";
         this.experienceYears = 0;
         this.available = false;
@@ -30,10 +34,6 @@ public class Veterinarian {
 
     public int getVetId() {
         return vetId;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public String getSpecialization() {
@@ -51,15 +51,6 @@ public class Veterinarian {
 
     public void setVetId(int vetId) {
         this.vetId = vetId;
-    }
-
-    public void setName(String name) {
-        if (name != null && !name.trim().isEmpty()) {
-            this.name = name;
-        } else {
-            this.name = "Unknown";
-            System.out.println("Veterinarian name cannot be empty!");
-        }
     }
 
     public void setSpecialization(String specialization) {
@@ -96,13 +87,22 @@ public class Veterinarian {
 
 
     @Override
+    public void work() {
+        System.out.println("Veterinarian " + name +
+                " is treating animals (" + specialization + ").");
+    }
+
+    @Override
+    public String getRole() {
+        return "Veterinarian";
+    }
+
+    @Override
     public String toString() {
-        return "Veterinarian{" +
-                "vetId=" + vetId +
-                ", name='" + name + '\'' +
-                ", specialization='" + specialization + '\'' +
-                ", experienceYears=" + experienceYears +
-                ", available=" + available +
-                '}';
+        return "[VETERINARIAN] Name: " + name +
+                ", Age: " + age +
+                ", Vet ID: " + vetId +
+                ", Specialization: " + specialization +
+                ", Experience: " + experienceYears + " years";
     }
 }
