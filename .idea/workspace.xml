@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b5d73fb-afe0-4495-97ce-0ae99b554dd4" name="Changes" comment="Week3: veterinarian menu completed">
-      <change afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Person.java" afterDir="false" />
+    <list default="true" id="6b5d73fb-afe0-4495-97ce-0ae99b554dd4" name="Changes" comment="Week 4 assignment: inheritance, polymorphism, instanceof and menu completed">
+      <change afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Treatable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/exception/InvalidInputException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Pet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Veterinarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/Veterinarian.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/menu/VetClinicMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/menu/VetClinicMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -69,15 +74,6 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="First" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.nurdaulet.vetclinic.First" />
-      <module name="VetClinic-OOP-Project" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -110,7 +106,8 @@
       <workItem from="1767787188042" duration="13045000" />
       <workItem from="1768112621207" duration="4855000" />
       <workItem from="1768893314047" duration="1995000" />
-      <workItem from="1768903254545" duration="7715000" />
+      <workItem from="1768903254545" duration="8473000" />
+      <workItem from="1768982146230" duration="13088000" />
     </task>
     <task id="LOCAL-00001" summary="Week1: initial project setup">
       <option name="closed" value="true" />
@@ -192,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767803700096</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Week 4 assignment: inheritance, polymorphism, instanceof and menu completed">
+      <option name="closed" value="true" />
+      <created>1768911356061</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1768911356062</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +211,7 @@
     <MESSAGE value="Week3: initial test data and scanner cleanup added" />
     <MESSAGE value="Week3" />
     <MESSAGE value="Week3: veterinarian menu completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Week3: veterinarian menu completed" />
+    <MESSAGE value="Week 4 assignment: inheritance, polymorphism, instanceof and menu completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Week 4 assignment: inheritance, polymorphism, instanceof and menu completed" />
   </component>
 </project>

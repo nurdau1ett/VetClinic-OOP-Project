@@ -1,6 +1,6 @@
 package com.nurdaulet.vetclinic;
 
-public class Person {
+public abstract class Person {
 
 
     protected int id;
@@ -13,9 +13,7 @@ public class Person {
         this.age = age;
     }
 
-    public void work() {
-        System.out.println(name + " is doing general work.");
-    }
+    public abstract void work();
 
     public String getRole() {
         return "Person";

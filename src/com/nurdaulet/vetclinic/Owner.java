@@ -46,26 +46,26 @@ public class Owner extends Person {
 
 
     public void setOwnerId(int ownerId) {
+        if (ownerId <= 0) {
+            throw new IllegalArgumentException("Owner ID must be positive");
+        }
         this.ownerId = ownerId;
     }
 
 
     public void setPhone(String phone) {
-        if (phone != null && phone.startsWith("+7")) {
-            this.phone = phone;
-        } else {
-            this.phone = "Invalid";
-            System.out.println("Phone number is invalid!");
+        if (phone == null || !phone.startsWith("+7")) {
+            throw new IllegalArgumentException("Phone number must start with +7");
         }
+        this.phone = phone;
     }
 
     public void setNumberOfPets(int numberOfPets) {
-        if (numberOfPets >= 0) {
-            this.numberOfPets = numberOfPets;
-            this.frequentClient = numberOfPets >= 3;
-        } else {
-            this.numberOfPets = 0;
+        if (numberOfPets < 0) {
+            throw new IllegalArgumentException("Number of pets cannot be negative");
         }
+        this.numberOfPets = numberOfPets;
+        this.frequentClient = numberOfPets >= 3;
     }
 
 

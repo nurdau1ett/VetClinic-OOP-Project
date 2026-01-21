@@ -1,6 +1,6 @@
 package com.nurdaulet.vetclinic;
 
-public class Veterinarian extends Person {
+public class Veterinarian extends Person implements Treatable {
 
 
     private int vetId;
@@ -50,25 +50,24 @@ public class Veterinarian extends Person {
 
 
     public void setVetId(int vetId) {
+        if (vetId <= 0) {
+            throw new IllegalArgumentException("Vet ID must be positive");
+        }
         this.vetId = vetId;
     }
 
     public void setSpecialization(String specialization) {
-        if (specialization != null && !specialization.trim().isEmpty()) {
-            this.specialization = specialization;
-        } else {
-            this.specialization = "General";
-            System.out.println("Specialization cannot be empty!");
+        if (specialization == null || specialization.trim().isEmpty()) {
+            throw new IllegalArgumentException("Specialization cannot be empty");
         }
+        this.specialization = specialization;
     }
 
     public void setExperienceYears(int experienceYears) {
-        if (experienceYears >= 0) {
-            this.experienceYears = experienceYears;
-        } else {
-            this.experienceYears = 0;
-            System.out.println("Experience years cannot be negative!");
+        if (experienceYears < 0) {
+            throw new IllegalArgumentException("Experience years cannot be negative");
         }
+        this.experienceYears = experienceYears;
     }
 
     public void setAvailable(boolean available) {
@@ -104,5 +103,18 @@ public class Veterinarian extends Person {
                 ", Vet ID: " + vetId +
                 ", Specialization: " + specialization +
                 ", Experience: " + experienceYears + " years";
+    }
+    @Override
+    public void treat(Pet pet) {
+        System.out.println(
+                "Veterinarian " + name +
+                        " is treating " + pet.getName() +
+                        " (" + pet.getSpecies() + ")"
+        );
+    }
+
+    @Override
+    public String getTreatmentType() {
+        return specialization;
     }
 }

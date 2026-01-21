@@ -15,7 +15,7 @@ public class VetClinicMenu implements Menu {
         pets = new ArrayList<>();
         scanner = new Scanner(System.in);
 
-        // test data (Main-нан көшеді)
+        // test data
         pets.add(new Pet(1, "Buddy", "Dog", 3, false));
         people.add(new Veterinarian(1, "Dr. Aibek", 35, 201, "Dog", 6, true));
     }
@@ -43,11 +43,26 @@ public class VetClinicMenu implements Menu {
                 scanner.nextLine();
 
                 switch (choice) {
-                    case 1 -> addPet();
-                    case 2 -> viewAllPets();
-                    case 0 -> running = false;
-                    default -> System.out.println("Invalid choice!");
+                    case 1:
+                        addPet();
+                        break;
+                    case 2:
+                        viewAllPets();
+                        break;
+                    case 3:
+                        addOwner();
+                        break;
+                    case 4:
+                        addVeterinarian();
+                        break;
+                    case 0:
+                        running = false;
+                        System.out.println("Exiting...");
+                        break;
+                    default:
+                        System.out.println("Invalid choice!");
                 }
+
             } catch (Exception e) {
                 System.out.println("Error: " + e.getMessage());
                 scanner.nextLine();
@@ -55,6 +70,83 @@ public class VetClinicMenu implements Menu {
         }
     }
 
-    private void addPet() { /* Main-нан көшіресің */ }
-    private void viewAllPets() { /* Main-нан көшіресің */ }
+    private void addPet() {
+        System.out.print("Pet ID: ");
+        int id = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.print("Name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Species: ");
+        String species = scanner.nextLine();
+
+        System.out.print("Age: ");
+        int age = scanner.nextInt();
+        scanner.nextLine();
+
+        pets.add(new Pet(id, name, species, age, false));
+        System.out.println("Pet added!");
+    }
+
+    private void viewAllPets() {
+        if (pets.isEmpty()) {
+            System.out.println("No pets found.");
+            return;
+        }
+
+        for (Pet pet : pets) {
+            System.out.println(pet);
+        }
+    }
+
+    private void addOwner() {
+        System.out.print("Person ID: ");
+        int id = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.print("Name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Age: ");
+        int age = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.print("Phone: ");
+        String phone = scanner.nextLine();
+
+        System.out.print("Number of pets: ");
+        int petsCount = scanner.nextInt();
+        scanner.nextLine();
+
+        people.add(new Owner(id, name, age, phone, petsCount, petsCount >= 3));
+        System.out.println("Owner added!");
+    }
+
+    private void addVeterinarian() {
+        System.out.print("Person ID: ");
+        int id = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.print("Name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Age: ");
+        int age = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.print("Vet ID: ");
+        int vetId = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.print("Specialization: ");
+        String spec = scanner.nextLine();
+
+        System.out.print("Experience years: ");
+        int exp = scanner.nextInt();
+        scanner.nextLine();
+
+        people.add(new Veterinarian(id, name, age, vetId, spec, exp, true));
+        System.out.println("Veterinarian added!");
+    }
 }
