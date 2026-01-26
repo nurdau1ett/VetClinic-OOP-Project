@@ -89,17 +89,6 @@ public class VetClinicMenu implements Menu {
         System.out.println("Pet added!");
     }
 
-    private void viewAllPets() {
-        if (pets.isEmpty()) {
-            System.out.println("No pets found.");
-            return;
-        }
-
-        for (Pet pet : pets) {
-            System.out.println(pet);
-        }
-    }
-
     private void addOwner() {
         System.out.print("Person ID: ");
         int id = scanner.nextInt();
@@ -148,5 +137,16 @@ public class VetClinicMenu implements Menu {
 
         people.add(new Veterinarian(id, name, age, vetId, spec, exp, true));
         System.out.println("Veterinarian added!");
+    }
+
+    private void viewAllPets() {
+        if (pets.isEmpty()) {
+            System.out.println("No pets found.");
+            return;
+        }
+
+        for (Pet pet : pets) {
+            System.out.println(pet);
+        }
     }
 }
