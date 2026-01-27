@@ -31,10 +31,10 @@ public class VetClinicMenu implements Menu {
     }
 
     @Override
-    public void run() {
+    public void run(){
         boolean running = true;
 
-        while (running) {
+        while(running){
             displayMenu();
             System.out.print("Choice: ");
 
@@ -42,7 +42,8 @@ public class VetClinicMenu implements Menu {
                 int choice = scanner.nextInt();
                 scanner.nextLine();
 
-                switch (choice) {
+                switch (choice){
+
                     case 1:
                         addPet();
                         break;
@@ -62,8 +63,7 @@ public class VetClinicMenu implements Menu {
                     default:
                         System.out.println("Invalid choice!");
                 }
-
-            } catch (Exception e) {
+            } catch (Exception e){
                 System.out.println("Error: " + e.getMessage());
                 scanner.nextLine();
             }

@@ -1,9 +1,59 @@
-package com.nurdaulet;
+void main() {
+}
 
-public class First_code {
-  public static void main(String[] args) {
-    System.out.println("Welcome to VetClinic System");
-    System.out.println("This project will manage clients, pets, vets, and appointments.");
-    System.out.println("Author: Nurdaulet, Astana IT University, BDA");
+
+
+public void run(){
+  boolean running = true;
+
+  while (running){
+    displayMenu;
+    System.out.println("Choice: ");
+
+    try{
+
+
+      int choice = scanner.nextInt();
+      scanner.nextLine();
+
+      switch(choice){
+
+        case 1:
+          addPet();
+          break;
+        case 2:
+          v
+          break;
+        case 3:
+          a
+          break;
+        case 4:
+          a
+          break;
+        case 0:
+          running = false;
+          System.out.println("Exiting...");
+          break;
+        default:
+          System.out.println("Invalid choice!");
+      }
+
+
+    } catch(Exception e){
+      System.out.println("Error: " + e.getMessage());
+      scanner.nextLine();
+    }
+
   }
 }
+
+private void addPet(){
+
+  System.out.print("Person ID: ");
+  int id = scanner.nextInt();
+  scanner.nextLine();
+
+}
+
+
+
