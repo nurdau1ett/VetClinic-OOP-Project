@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b5d73fb-afe0-4495-97ce-0ae99b554dd4" name="Changes" comment="3 assignment completed">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/postgresql_42_7_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/database/DatabaseConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/database/PetDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/database/TestConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/database/TestInsertPet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/nurdaulet/vetclinic/database/TestSelectPet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VetClinic-OOP-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/VetClinic-OOP-Project.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +68,11 @@
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -114,7 +112,8 @@
       <workItem from="1769447539248" duration="10620000" />
       <workItem from="1769490815915" duration="4584000" />
       <workItem from="1769496296191" duration="1693000" />
-      <workItem from="1769525521259" duration="5272000" />
+      <workItem from="1769525521259" duration="5489000" />
+      <workItem from="1769587788260" duration="500000" />
     </task>
     <task id="LOCAL-00001" summary="Week1: initial project setup">
       <option name="closed" value="true" />
@@ -236,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769525783193</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="3 assignment completed">
+      <option name="closed" value="true" />
+      <created>1769533456758</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1769533456758</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
